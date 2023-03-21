@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Generador de memes por María Eugenia Toledo; copia la url de la imagen que más te guste, agrega un texto y listo, ya tenes tu propio memes">
+    <meta name="keywords" content="web developer, responsive design, javascript, website, html, css, frontend, full stack">
+    <link rel="shortcut icon" href="./images/edit.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Editor de memes</title>
+</head>
+<body>
+    <header>
+        <h1 class="title">Generador de Memes</h1>
+        <nav class="buttons__edit">
+                <button class="buttons__edit-header buttons__general" id="button__image">
+                    <i class="fa-solid fa-file-image icon"></i> 
+                    Imagen
+                </button>
+                <button class="buttons__edit-header buttons__general" id="button__text">
+                    <i class="fas fa-font icon"></i>
+                    Texto
+                </button>
+                <button class="buttons__edit-header buttons__general hidden" id="button__dark">
+                    <i class="fa-solid fa-lightbulb icon"></i>
+                    Modo oscuro
+                </button>
+                <button class="buttons__edit-header buttons__general " id="button__light">
+                    <i class="fa-regular fa-lightbulb icon"></i>
+                    Modo claro
+                </button>
+            </nav>
+    </header>
+    <main>
+        <section class="main__editor">
+                    <p class="main__editor-text">TOP TEXT</p>
+                    <div id="image-meme"></div>
+                    <p class="main__editor-text">BOTTOM TEXT</p>
+        </section>
+        <button class="main__editor-button" >
+            <i class="fas fa-download button-icon-text" aria-hidden="true"></i>
+            Descargar meme
+        </button>
+    </main>
+    <aside class="aside__hidden board board__image">
+            <button class="board__btn-exit buttons__general board__btn-exit-image"> 
+                <i class=" fas fa-times" aria-hidden="true"></i>
+            </button>
+            <section class="image__aside-editor">
+                <h2>Imagen</h2>
+                <article>
+                    <h3>Url</h3>
+                    <input type="text" id="image__url" class="inputs buttons">
+                </article>
+                <article>
+                    <h3>Fondo</h3>
+                    <article id="board__background">
+                       <button>
+                        <input type="color" name="Background color" id="bckg__image" value="#FFFFFF">
+                        <span aria-hidden="true"> #FFFFFF</span>
+                        </button>
+                        <select class="board__select buttons">
+                            <option value="unset">Ninguno</option>
+                            <option value="light">Aclarar</option>
+                            <option value="dark">Oscurecer</option>
+                            <option value="difference">Diferencia</option>
+                            <option value="luminosity">Luminosidad</option>
+                            <option value="multiply">Multiplicar</option>
+                        </select>
+                    </article>
+                </article>
+                <article>
+                    <h3>Filtros</h3>
+                    <article class="filters">
+                        <label for="">Brillo</label>
+                        <input type="range" class="slider__filters" id="slider" min="0" max="1" step="0.1">
+                    </article>
+                    <article class="filters">
+                        <label for="">Opacidad</label>
+                        <input type="range" class="slider__filters" id="slider" min="0" max="1" step="0.1">
+                    </article>
+                    <article class="filters">
+                        <label for="">Contraste</label>
+                        <input type="range" class="slider__filters" id="slider" min="0" max="1" step="0.1">
+                    </article>
+                    <article class="filters">
+                        <label for="">Desenfoque</label>
+                        <input type="range" class="slider__filters" id="slider" min="0" max="1" step="0.1">
+                    </article>
+                    <article class="filters">
+                        <label for="">Escala de grises</label>
+                        <input type="range" class="slider__filters" id="slider" min="0" max="1" step="0.1">
+                    </article>
+                    <article class="filters">
+                        <label for="">Sepia</label>
+                        <input type="range" class="slider__filters" id="slider" min="0" max="1" step="0.1">
+                    </article>
+                    <article class="filters">
+                        <label for="">Hue</label>
+                        <input type="range" class="slider__filters" id="slider" min="0" max="1" step="0.1">
+                    </article>
+                    <article class="filters">
+                        <label for="">Saturación</label>
+                        <input type="range" class="slider__filters" id="slider" min="0" max="1" step="0.1">
+                    </article>
+                    <article class="filters">
+                        <label for="">Negativo</label>
+                        <input type="range" class="slider__filters" id="slider" min="0" max="1" step="0.1">
+                    </article>
+                </article>
+                <button type="reset" class="filters__reset buttons">Reestablecer filtros</button>
+            </section>
+    </aside>
+    <aside class="aside__hidden board board__text">
+        <button class="board__btn-exit board__btn-exit-text"> 
+            <i class=" fas fa-times" aria-hidden="true"></i>
+        </button>
+                <h2>Texto</h2>
+                <h3>Superior</h3>
+                    <textarea name="" class="inputs buttons" id="">Top Text</textarea>
+                    <input type="checkbox">
+                    <label for="">Sin texto superior</label>
+                <h3>Inferior</h3>
+                    <textarea name="" class="inputs buttons" id="">Bottom Text</textarea>
+                    <input type="checkbox">
+                    <label for="">Sin texto inferior</label>
+                <section>
+                    <h3>Fuente</h3>
+                    <select class="inputs buttons">
+                        <option value="Arial">Arial</option>
+                        <option value="Arial Black">Arial Black</option>
+                        <option value="American Typewriter">American Typewriter</option>
+                        <option value="Andale Mono">Andale Mono</option>
+                        <option value="Comic Sans MS">Comic Sans MS</option>
+                        <option value="Helvetica">Helvetica</option>
+                        <option value="Impact">Impact</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                    </select>
+                    <article class="size__fonts">
+                        <input type="number" class="sizes buttons" min="12" value="35">
+                        <button class="sizes__buttons buttons">
+                            <i class="fas fa-align-left" aria-hidden="true"></i>
+                        </button>
+                        <button class="sizes__buttons buttons">
+                            <i class="fas fa-align-center" aria-hidden="true"></i>
+                        </button>
+                        <button class="sizes__buttons buttons">
+                            <i class="fas fa-align-right" aria-hidden="true"></i>
+                        </button>
+                    </article>
+                </section>
+                <section class="fonts__section">
+                        <article id="fonts__color" class="fonts__color-section">
+                            <h3>Color</h3>
+                            <button>
+                                <input type="color" id="color__font" value="#000000">
+                                <span aria-hidden="true">#000000</span>
+                            </button>
+                        </article>
+                        <article id="background__color" class="fonts__bckg-section">
+                            <h3>Fondo</h3>
+                            <button>
+                                <input type="color" value="#FFFFFF">
+                                <span aria-hidden="true">#FFFFFF</span>
+                            </button>
+                        </article>
+                </section>
+                <section>
+                    <input type="checkbox">
+                     <label for="">Fondo transparente</label>
+                </section>
+                <section class="fonts__outline ">
+                    <h3>Contorno</h3>
+                    <article>
+                        <button class="buttons">Ninguno</button>
+                        <button class="buttons">Claro</button>
+                        <button class="buttons">Oscuro</button>
+                    </article>
+                </section>
+                <section>
+                    <h3>Espaciado</h3>
+                    <input type="number" class="inputs buttons" min="10" max="50" value="35">
+                </section>
+                <section>
+                    <h3>Interlineado</h3>
+                    <select name="" class="inputs buttons" id="">
+                        <option value="">0.8</option>
+                        <option value="">1</option>
+                        <option value="">1.2</option>
+                        <option value="">1.5</option>
+                        <option value="">2</option>
+                        <option value="">2.5</option>
+                    </select>
+                </section>
+    </aside>
+    <script src="./javascript/index.js"></script>
+</body>
+
+</html>
