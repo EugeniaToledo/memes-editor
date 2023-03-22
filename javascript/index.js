@@ -132,7 +132,7 @@ $(".text__right").addEventListener("click", () => {
 $("#color__font").addEventListener("input", () => {
     $(".main__editor-top-text").style.color = $ ("#color__font").value
     $(".main__editor-bottom-text").style.color = $ ("#color__font").value
-    $("#span__color-text").innerText = ($("#color__font").value).toUpperCase()
+    $("#span__color-font").innerText = ($("#color__font").value).toUpperCase()
     $("#color__font").style.backgroundColor = $("#color__font").value
 })
 
@@ -161,6 +161,7 @@ $("#transparent__background").addEventListener ("change" , () => {
         $(".main__editor-bottom-text").style.backgroundColor = $ ("#background__font").value
     }
 })
+
 
 
 
