@@ -162,9 +162,40 @@ $("#transparent__background").addEventListener ("change" , () => {
     }
 })
 
+// contour none -- t & b
+
+$(".button__none").addEventListener("click", () => {
+    $(".main__editor-top-text").style.textShadow = "none"
+    $(".main__editor-bottom-text").style.textShadow = "none"
+})
 
 
+// contour light -- t & b 
+$(".button__light").addEventListener("click", () => {
+    $(".main__editor-top-text").style.textShadow = "-2px -2px 0px #FFF, 2px -2px 0px #FFF, -2px 2px 0px #FFF, 2px 2px 0px #FFF"
+    $(".main__editor-bottom-text").style.textShadow = "-2px -2px 0px #FFF, 2px -2px 0px #FFF, -2px 2px 0px #FFF, 2px 2px 0px #FFF"
+})
 
+//contour dark -- t & b
+
+$(".button__dark-out").addEventListener ( "click" , () => {
+    $(".main__editor-top-text").style.textShadow = "-2px -2px 2px #000, 2px 2px 2px #000, -2px 2px 2px #000, 2px -2px 2px #000"
+    $(".main__editor-bottom-text").style.textShadow = "-2px -2px 2px #000, 2px 2px 2px #000, -2px 2px 2px #000, 2px -2px 2px #000"
+})
+
+// spacing -- t & b
+
+$(".spacing__button").addEventListener ("input", () => {
+    $(".main__editor-top-text").style.padding = `${$(".spacing__button").value}px`
+    $(".main__editor-bottom-text").style.paddin = `${$(".spacing__button").value}px`
+})
+
+// leading -- t & b
+
+$(".leading__select").addEventListener ( "input" , () => {
+    $(".main__editor-top-text").style.lineHeight = $(".leading__select").value
+    $(".main__editor-bottom-text").style.lineHeight = $(".leading__select").value
+})
 
 
 
