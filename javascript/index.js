@@ -100,7 +100,67 @@ $("#text__bottom-check").addEventListener("change", () => {
     }
 })
 
+// fonts section
 
+$(".fonts").addEventListener("click", () => {
+    $(".main__editor-top-text").style.fontFamily = $(".fonts").value
+    $(".main__editor-bottom-text").style.fontFamily = $ (".fonts").value
+})
+
+$(".size__input").addEventListener("click", () => {
+    $(".main__editor-top-text").style.fontSize = `${$(".size__input").value}px`
+    $(".main__editor-bottom-text").style.fontSize = `${$(".size__input").value}px`
+})
+
+$(".text__left").addEventListener("click", () => {
+    $(".main__editor-top-text").style.textAlign = "left"
+    $(".main__editor-bottom-text").style.textAlign = "left"
+})
+
+$(".text__center").addEventListener("click", () => {
+    $(".main__editor-top-text").style.textAlign = "center"
+    $(".main__editor-bottom-text").style.textAlign = "center"
+})
+
+$(".text__right").addEventListener("click", () => {
+    $(".main__editor-top-text").style.textAlign = "right"
+    $(".main__editor-bottom-text").style.textAlign = "right"
+})
+
+//color -- t & b
+
+$("#color__font").addEventListener("input", () => {
+    $(".main__editor-top-text").style.color = $ ("#color__font").value
+    $(".main__editor-bottom-text").style.color = $ ("#color__font").value
+    $("#span__color-text").innerText = ($("#color__font").value).toUpperCase()
+    $("#color__font").style.backgroundColor = $("#color__font").value
+})
+
+//background-color -- t & b
+
+$("#background__font").addEventListener("input", () => {
+    $(".main__editor-top-text").style.backgroundColor = $ ("#background__font").value
+    $(".main__editor-bottom-text").style.backgroundColor = $ ("#background__font").value
+    $("#span__color-background").innerText = ($("#background__font").value).toUpperCase()
+    $("#background__font").style.backgroundColor = $("#background__font").value
+})
+
+// transparent background-color -- t & b
+
+$("#transparent__background").addEventListener ("change" , () => {
+    if ($("#transparent__background").checked){
+        $(".main__editor-top-text").style.position= "absolute"
+        $(".main__editor-top-text").style.backgroundColor = "transparent"
+        $(".main__editor-top-text").style.top = "0"
+        $(".main__editor-bottom-text").style.position= "absolute"
+        $(".main__editor-bottom-text").style.backgroundColor = "transparent"
+        $(".main__editor-bottom-text").style.bottom = "0"
+ 
+    }else {
+        $(".main__editor-top-text").style.backgroundColor = $ ("#background__font").value
+        $(".main__editor-bottom-text").style.backgroundColor = $ ("#background__font").value
+    }
+})
 
 
 

@@ -134,7 +134,7 @@
                     <label for="">Sin texto inferior</label>
                 <section>
                     <h3>Fuente</h3>
-                    <select class="inputs buttons">
+                    <select class="inputs buttons fonts">
                         <option value="Arial">Arial</option>
                         <option value="Arial Black">Arial Black</option>
                         <option value="American Typewriter">American Typewriter</option>
@@ -146,14 +146,14 @@
                         <option value="Times New Roman">Times New Roman</option>
                     </select>
                     <article class="size__fonts">
-                        <input type="number" class="sizes buttons" min="12" value="35">
-                        <button class="sizes__buttons buttons">
+                        <input type="number" class="sizes size__input buttons" min="12" value="35">
+                        <button class="text__left sizes__buttons buttons">
                             <i class="fas fa-align-left" aria-hidden="true"></i>
                         </button>
-                        <button class="sizes__buttons buttons">
+                        <button class="text__center sizes__buttons buttons">
                             <i class="fas fa-align-center" aria-hidden="true"></i>
                         </button>
-                        <button class="sizes__buttons buttons">
+                        <button class="text__right sizes__buttons buttons">
                             <i class="fas fa-align-right" aria-hidden="true"></i>
                         </button>
                     </article>
@@ -162,20 +162,20 @@
                         <article id="fonts__color" class="fonts__color-section">
                             <h3>Color</h3>
                             <button>
-                                <input type="color" id="color__font" value="#000000">
-                                <span aria-hidden="true">#000000</span>
+                                <input type="color" id="color__font" value="#000000" class="color__font">
+                                <span id="span__color-font">#000000</span>
                             </button>
                         </article>
                         <article id="background__color" class="fonts__bckg-section">
                             <h3>Fondo</h3>
                             <button>
-                                <input type="color" value="#FFFFFF">
-                                <span aria-hidden="true">#FFFFFF</span>
+                                <input type="color" id="background__font" value="#FFFFFF">
+                                <span id="span__color-background">#FFFFFF</span>
                             </button>
                         </article>
                 </section>
                 <section>
-                    <input type="checkbox">
+                    <input type="checkbox" id="transparent__background">
                      <label for="">Fondo transparente</label>
                 </section>
                 <section class="fonts__outline ">
