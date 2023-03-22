@@ -63,12 +63,12 @@ $("#image__url").addEventListener("input", () => {
 // meme download
 
 const memeDownload = () => {
-    domtoimage.toBlob($(".main__editor")).then((blob) => {
-        saveAs(blob, "mi-meme.png")
+    domtoimage.toBlob($("#meme__photo")).then((blob) => {
+        saveAs(blob, "meme__photo.png")
     })
 }
 
-$("#button__download").addEventListener("click", memeDownload)
+$("#button__download").addEventListener('click', memeDownload)
 
 // panel --- aside text --
 
