@@ -92,7 +92,7 @@ main {
 
 }
 
-#image-meme {
+#image__meme {
     display: flex;
     flex-direction: column;
     background-size: cover;

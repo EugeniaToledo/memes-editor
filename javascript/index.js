@@ -47,11 +47,35 @@ const change__mode = () => {
     }
 }
 
-
-
 // Buttons dark and light
 
 
 $("#button__dark").addEventListener("click",change__mode)
 
 $("#button__light").addEventListener("click",change__mode)
+
+// url image
+
+$("#image__url").addEventListener("input", () => {
+    $("#image__meme").style.backgroundImage = `url(${$("#image__url").value})`
+})
+
+
+// panel --- aside text --
+
+
+
+
+
+
+
+
+
+
+// panel --- aside image --
+
+$("#bckg__image").addEventListener("input", () => {
+    $("#image__meme").style.backgroundColor=$("#bckg__image").value
+    $("#bckg__image-span").innerText = ($("#bckg__image").value).toUpperCase()
+    $("#bckg__image").style.backgroundColor = $ ("#bckg__image").value
+})
