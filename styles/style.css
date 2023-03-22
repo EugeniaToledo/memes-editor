@@ -33,7 +33,6 @@ body {
     display: flex;
     color: var(--first-color);
     flex-direction: column;
-    overflow: hidden;
     height: 100vh;
 }
 
