@@ -60,10 +60,45 @@ $("#image__url").addEventListener("input", () => {
     $("#image__meme").style.backgroundImage = `url(${$("#image__url").value})`
 })
 
+// meme download
+
+const memeDownload = () => {
+    domtoimage.toBlob($(".main__editor")).then((blob) => {
+        saveAs(blob, "mi-meme.png")
+    })
+}
+
+$("#button__download").addEventListener("click", memeDownload)
 
 // panel --- aside text --
 
+$(".main__editor-top-text").style.backgroundColor = "white"
+$("#text__top").addEventListener("input", () => {
+    $(".main__editor-top-text").innerText = $("#text__top").value
+})
 
+$(".main__editor-bottom-text").style.backgroundColor = "white"
+$("#text__bottom").addEventListener("input", () => {
+    $(".main__editor-bottom-text").innerText = $("#text__bottom").value
+})
+
+// text desappear t&b
+
+$("#text__top-check").addEventListener("change", () => {
+    if ($("#text__top-check").checked){
+        $(".main__editor-top-text").classList.add("hidden")
+    }else {
+        $(".main__editor-top-text").classList.remove("hidden")
+    }
+})
+
+$("#text__bottom-check").addEventListener("change", () => {
+    if ($("#text__bottom-check").checked){
+        $(".main__editor-bottom-text").classList.add("hidden")
+    } else {
+        $(".main__editor-bottom-text").classList.remove("hidden")
+    }
+})
 
 
 
@@ -74,8 +109,4 @@ $("#image__url").addEventListener("input", () => {
 
 // panel --- aside image --
 
-$("#bckg__image").addEventListener("input", () => {
-    $("#image__meme").style.backgroundColor=$("#bckg__image").value
-    $("#bckg__image-span").innerText = ($("#bckg__image").value).toUpperCase()
-    $("#bckg__image").style.backgroundColor = $ ("#bckg__image").value
-})
+

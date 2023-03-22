@@ -38,13 +38,13 @@
             </nav>
     </header>
     <main>
-        <section class="main__editor">
-                    <p class="main__editor-text">TOP TEXT</p>
+        <section class="main__editor" id="meme__editor">
+                    <p class="main__editor-text main__editor-top-text">TOP TEXT</p>
                     <div id="image__meme"></div>
-                    <p class="main__editor-text">BOTTOM TEXT</p>
+                    <p class="main__editor-text main__editor-bottom-text">BOTTOM TEXT</p>
         </section>
-        <button class="main__editor-button" >
-            <i class="fas fa-download button-icon-text" aria-hidden="true"></i>
+        <button class="main__editor-button" id="button__download" >
+            <i class="fa-solid fa-download"></i>
             Descargar meme
         </button>
     </main>
@@ -123,12 +123,12 @@
         </button>
                 <h2>Texto</h2>
                 <h3>Superior</h3>
-                    <textarea name="" class="inputs buttons" id="">Top Text</textarea>
-                    <input type="checkbox">
+                    <input name="" class="inputs buttons" id="text__top">
+                    <input type="checkbox" id="text__top-check">
                     <label for="">Sin texto superior</label>
                 <h3>Inferior</h3>
-                    <textarea name="" class="inputs buttons" id="">Bottom Text</textarea>
-                    <input type="checkbox">
+                    <input name="" class="inputs buttons" id="text__bottom">
+                    <input type="checkbox" id="text__bottom-check">
                     <label for="">Sin texto inferior</label>
                 <section>
                     <h3>Fuente</h3>
