@@ -1,3 +1,5 @@
+// constant universal
+
 const $ = (selector) => document.querySelector(selector)
 
 // Board Image appear
@@ -65,6 +67,12 @@ const memeDownload = () => {
 }
 
 $("#button__download").addEventListener('click', memeDownload)
+
+// url image
+
+$("#image__url").addEventListener("input", () => {
+    $("#image__meme").style.backgroundImage = `url(${$("#image__url").value})`
+})
 
 // PANEL --- aside text --
 
@@ -197,11 +205,7 @@ $(".leading__select").addEventListener ( "input" , () => {
 // PANEL --- aside image --
 
 
-// url image
 
-$("#image__url").addEventListener("input", () => {
-    $("#image__meme").style.backgroundImage = `url(${$("#image__url").value})`
-})
 
 //background-color -- image meme 
 
@@ -217,3 +221,53 @@ $("#bckgstyle__select").addEventListener ("click" , () => {
     $("#image__meme").style.backgroundBlendMode = $("#bckgstyle__select").value
     $("#image__meme").style.backgroundColor = $ ("#bckg__image").value
 })
+
+// filters -- image meme
+
+const filters = () => {
+$("#image__meme").style.filter = 
+`brightness(${$(".brightness").value}) 
+opacity(${$(".opacity").value}) 
+contrast(${$(".contrast").value}%) 
+blur(${$(".blur").value}px) 
+grayscale(${$(".grayscale").value}%) 
+sepia(${$(".sepia").value}%) 
+hue-rotate(${$(".hue").value}deg) 
+saturate(${$(".saturation").value}%) 
+invert(${$(".negative").value}%)`
+}
+
+// filter brightness
+$(".brightness").addEventListener ("input", filters)
+// filter opacity
+$(".opacity").addEventListener ("input", filters)
+// filter contrast
+$(".contrast").addEventListener ( "input", filters)
+// filter blur
+$(".blur").addEventListener("input", filters)
+// filter grayscale
+$(".grayscale").addEventListener ("input", filters)
+// filter sepia
+$(".sepia").addEventListener ("input", filters)
+// filter hue
+$(".hue").addEventListener ("input", filters)
+// filter saturation
+$(".saturation").addEventListener("input", filters)
+// filter negative
+$(".negative").addEventListener ("input", filters)
+
+// reset filter -- image meme
+
+const reset__filters = () =>{
+    $(".brightness").value = "100"
+    $(".opacity").value = "100"
+    $(".contrast").value = "0"
+    $(".blur").value = "0"
+    $(".grayscale").value = "0"
+    $(".sepia").value = "0"
+    $(".hue").value = "0"
+    $(".saturation").value = "0"
+    $(".negative").value = "0"
+    $("#image__meme").style.filter = "none"
+}
+$(".button__reset").addEventListener ("click", reset__filters)
