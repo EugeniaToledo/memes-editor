@@ -67,10 +67,10 @@
                         <input type="color" name="Background color" id="bckg__image" value="#FFFFFF">
                         <span id="bckg__image-span"> #FFFFFF</span>
                         </button>
-                        <select class="board__select buttons">
+                        <select class="board__select buttons" id="bckgstyle__select">
                             <option value="unset">Ninguno</option>
-                            <option value="light">Aclarar</option>
-                            <option value="dark">Oscurecer</option>
+                            <option value="lighten">Aclarar</option>
+                            <option value="darken">Oscurecer</option>
                             <option value="difference">Diferencia</option>
                             <option value="luminosity">Luminosidad</option>
                             <option value="multiply">Multiplicar</option>
@@ -81,39 +81,39 @@
                     <h3>Filtros</h3>
                     <article class="filters">
                         <label for="">Brillo</label>
-                        <input type="range" class="slider__filters" id="slider" min="0" max="1" step="0.1">
+                        <input type="range" class="slider__filters brightness" id="slider" value="1" min="0" max="1" step="0.1">
                     </article>
                     <article class="filters">
                         <label for="">Opacidad</label>
-                        <input type="range" class="slider__filters" id="slider" min="0" max="1" step="0.1">
+                        <input type="range" class="slider__filters opacity" id="slider" value="1" min="0" max="1" step="0.1">
                     </article>
                     <article class="filters">
                         <label for="">Contraste</label>
-                        <input type="range" class="slider__filters" id="slider" min="0" max="1" step="0.1">
+                        <input type="range" class="slider__filters contrast" id="slider" value="100" min="100" max="1000" step="1">
                     </article>
                     <article class="filters">
                         <label for="">Desenfoque</label>
-                        <input type="range" class="slider__filters" id="slider" min="0" max="1" step="0.1">
+                        <input type="range" class="slider__filters blur" id="slider" value="0" min="0" max="10" step="0.1">
                     </article>
                     <article class="filters">
                         <label for="">Escala de grises</label>
-                        <input type="range" class="slider__filters" id="slider" min="0" max="1" step="0.1">
+                        <input type="range" class="slider__filters grayscale" id="slider" value="0" min="0" max="100" step="1">
                     </article>
                     <article class="filters">
                         <label for="">Sepia</label>
-                        <input type="range" class="slider__filters" id="slider" min="0" max="1" step="0.1">
+                        <input type="range" class="slider__filters sepia" id="slider" value="0" min="0" max="100" step="1">
                     </article>
                     <article class="filters">
                         <label for="">Hue</label>
-                        <input type="range" class="slider__filters" id="slider" min="0" max="1" step="0.1">
+                        <input type="range" class="slider__filters hue" id="slider" value="0" min="0" max="359" step="1">
                     </article>
                     <article class="filters">
                         <label for="">Saturación</label>
-                        <input type="range" class="slider__filters" id="slider" min="0" max="1" step="0.1">
+                        <input type="range" class="slider__filters saturation" id="slider" value="100" min="100" max="1000" step="10">
                     </article>
                     <article class="filters">
                         <label for="">Negativo</label>
-                        <input type="range" class="slider__filters" id="slider" min="0" max="1" step="0.1">
+                        <input type="range" class="slider__filters negative" id="slider" value="0" min="0" max="1" step="0.1">
                     </article>
                 </article>
                 <button type="reset" class="filters__reset buttons">Reestablecer filtros</button>

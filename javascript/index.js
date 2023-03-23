@@ -54,11 +54,7 @@ $("#button__dark").addEventListener("click",change__mode)
 
 $("#button__light").addEventListener("click",change__mode)
 
-// url image
 
-$("#image__url").addEventListener("input", () => {
-    $("#image__meme").style.backgroundImage = `url(${$("#image__url").value})`
-})
 
 // meme download
 
@@ -70,7 +66,7 @@ const memeDownload = () => {
 
 $("#button__download").addEventListener('click', memeDownload)
 
-// panel --- aside text --
+// PANEL --- aside text --
 
 $(".main__editor-top-text").style.backgroundColor = "white"
 $("#text__top").addEventListener("input", () => {
@@ -198,7 +194,26 @@ $(".leading__select").addEventListener ( "input" , () => {
 })
 
 
+// PANEL --- aside image --
 
-// panel --- aside image --
 
+// url image
 
+$("#image__url").addEventListener("input", () => {
+    $("#image__meme").style.backgroundImage = `url(${$("#image__url").value})`
+})
+
+//background-color -- image meme 
+
+$("#bckg__image").addEventListener ("input", () => {
+    $("#image__meme").style.backgroundColor = $("#bckg__image").value
+    $("#bckg__image-span").innerText = ($("#bckg__image").value).toUpperCase()
+    $("#bckg__image").style.backgroundColor = $("#bckg__image").value
+})
+
+//background-select -- image meme
+
+$("#bckgstyle__select").addEventListener ("click" , () => {
+    $("#image__meme").style.backgroundBlendMode = $("#bckgstyle__select").value
+    $("#image__meme").style.backgroundColor = $ ("#bckg__image").value
+})
