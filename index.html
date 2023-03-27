@@ -18,6 +18,7 @@
     <title>Editor de memes</title>
 </head>
 <body>
+    <!-- header nav bar w/ buttons-->
     <header>
         <h1 class="title">Generador de Memes</h1>
         <nav class="buttons__edit">
@@ -39,6 +40,7 @@
                 </button>
             </nav>
     </header>
+    <!-- main w/ container (editor meme)-->
     <main>
         <section class="main__editor" id="meme__photo">
                     <p class="main__editor-text main__editor-top-text">TOP TEXT</p>
@@ -50,6 +52,7 @@
             Descargar meme
         </button>
     </main>
+    <!-- image panel -->
     <aside class="aside__hidden board board__image">
             <button class="board__btn-exit buttons__general board__btn-exit-image"> 
                 <i class=" fas fa-times" aria-hidden="true"></i>
@@ -58,16 +61,16 @@
                 <h2>Imagen</h2>
                 <article>
                     <h3>Url</h3>
-                    <input type="text" id="image__url" class="inputs buttons">
+                    <input type="text" name="uniform resource locator" id="image__url" class="inputs buttons">
                 </article>
                 <article>
                     <h3>Fondo</h3>
                     <article id="board__background">
                        <button>
-                        <input type="color" name="Background color" id="bckg__image" value="#FFFFFF">
+                        <input type="color" name="background color" id="bckg__image" value="#FFFFFF">
                         <span id="bckg__image-span"> #FFFFFF</span>
                         </button>
-                        <select class="board__select buttons" id="bckgstyle__select">
+                        <select class="board__select buttons" name="filters background" id="bckgstyle__select">
                             <option value="unset">Ninguno</option>
                             <option value="lighten">Aclarar</option>
                             <option value="darken">Oscurecer</option>
@@ -78,63 +81,66 @@
                     </article>
                 </article>
                 <article>
+             <!-- filters image panel -->
                     <h3>Filtros</h3>
                     <article class="filters">
                         <label for="">Brillo</label>
-                        <input type="range" class="slider__filters brightness" id="slider" value="1" min="0" max="1" step="0.1">
+                        <input type="range" name="brightness filter" class="slider__filters brightness" id="slider" value="1" min="0" max="1" step="0.1">
                     </article>
                     <article class="filters">
                         <label for="">Opacidad</label>
-                        <input type="range" class="slider__filters opacity" id="slider" value="1" min="0" max="1" step="0.1">
+                        <input type="range" name="opacity filter" class="slider__filters opacity" id="slider" value="1" min="0" max="1" step="0.1">
                     </article>
                     <article class="filters">
                         <label for="">Contraste</label>
-                        <input type="range" class="slider__filters contrast" id="slider" value="100" min="100" max="1000" step="1">
+                        <input type="range" name="contrast filter" class="slider__filters contrast" id="slider" value="100" min="100" max="1000" step="1">
                     </article>
                     <article class="filters">
                         <label for="">Desenfoque</label>
-                        <input type="range" class="slider__filters blur" id="slider" value="0" min="0" max="10" step="0.1">
+                        <input type="range" name="blur filter" class="slider__filters blur" id="slider" value="0" min="0" max="10" step="0.1">
                     </article>
                     <article class="filters">
                         <label for="">Escala de grises</label>
-                        <input type="range" class="slider__filters grayscale" id="slider" value="0" min="0" max="100" step="1">
+                        <input type="range" name="grayscale filter" class="slider__filters grayscale" id="slider" value="0" min="0" max="100" step="1">
                     </article>
                     <article class="filters">
                         <label for="">Sepia</label>
-                        <input type="range" class="slider__filters sepia" id="slider" value="0" min="0" max="100" step="1">
+                        <input type="range" name="sepia filter" class="slider__filters sepia" id="slider" value="0" min="0" max="100" step="1">
                     </article>
                     <article class="filters">
                         <label for="">Hue</label>
-                        <input type="range" class="slider__filters hue" id="slider" value="0" min="0" max="359" step="1">
+                        <input type="range" name="hue filter" class="slider__filters hue" id="slider" value="0" min="0" max="359" step="1">
                     </article>
                     <article class="filters">
                         <label for="">Saturación</label>
-                        <input type="range" class="slider__filters saturation" id="slider" value="0" min="100" max="1000" step="10">
+                        <input type="range" name="saturation filter" class="slider__filters saturation" id="slider" value="0" min="100" max="1000" step="10">
                     </article>
                     <article class="filters">
                         <label for="">Negativo</label>
-                        <input type="range" class="slider__filters negative" id="slider" value="0" min="0" max="1" step="0.1">
+                        <input type="range" name="negative filter" class="slider__filters negative" id="slider" value="0" min="0" max="1" step="0.1">
                     </article>
                 </article>
                 <button type="reset" class="filters__reset button__reset buttons">Reestablecer filtros</button>
             </section>
     </aside>
+    <!-- text panel -->
     <aside class="aside__hidden board board__text">
         <button class="board__btn-exit board__btn-exit-text"> 
             <i class=" fas fa-times" aria-hidden="true"></i>
         </button>
                 <h2>Texto</h2>
                 <h3>Superior</h3>
-                    <input name="" class="inputs buttons" id="text__top">
-                    <input type="checkbox" id="text__top-check">
+                    <input name="top text" class="inputs buttons" id="text__top">
+                    <input type="checkbox" name="checkbox" id="text__top-check">
                     <label for="">Sin texto superior</label>
                 <h3>Inferior</h3>
-                    <input name="" class="inputs buttons" id="text__bottom">
-                    <input type="checkbox" id="text__bottom-check">
+                    <input name="bottom text" class="inputs buttons" id="text__bottom">
+                    <input type="checkbox" name="checkbox" id="text__bottom-check">
                     <label for="">Sin texto inferior</label>
                 <section>
+    <!-- fonts text panel -->
                     <h3>Fuente</h3>
-                    <select class="inputs buttons fonts">
+                    <select name="font family" class="inputs buttons fonts">
                         <option value="Arial">Arial</option>
                         <option value="Arial Black">Arial Black</option>
                         <option value="American Typewriter">American Typewriter</option>
@@ -145,8 +151,9 @@
                         <option value="Verdana">Verdana</option>
                         <option value="Times New Roman">Times New Roman</option>
                     </select>
+    <!-- size fonts -- text panel -->
                     <article class="size__fonts">
-                        <input type="number" class="sizes size__input buttons" min="12" value="35">
+                        <input type="number" name="font size" class="sizes size__input buttons" min="12" value="35">
                         <button class="text__left sizes__buttons buttons">
                             <i class="fas fa-align-left" aria-hidden="true"></i>
                         </button>
@@ -158,24 +165,26 @@
                         </button>
                     </article>
                 </section>
+    <!-- color and background color -- text panel -->
                 <section class="fonts__section">
                         <article id="fonts__color" class="fonts__color-section">
                             <h3>Color</h3>
                             <button>
-                                <input type="color" id="color__font" value="#000000">
+                                <input type="color" name="font color" id="color__font" value="#000000">
                                 <span id="span__color-font">#000000</span>
                             </button>
                         </article>
                         <article id="background__color" class="fonts__bckg-section">
                             <h3>Fondo</h3>
                             <button>
-                                <input type="color" id="background__font" value="#FFFFFF">
+                                <input type="color" name="background color" id="background__font" value="#FFFFFF">
                                 <span id="span__color-background">#FFFFFF</span>
                             </button>
                         </article>
                 </section>
+    <!-- styles text panel -->
                 <section>
-                    <input type="checkbox" id="transparent__background">
+                    <input type="checkbox" name="checkbox" id="transparent__background">
                      <label for="">Fondo transparente</label>
                 </section>
                 <section class="fonts__outline ">
@@ -188,11 +197,11 @@
                 </section>
                 <section>
                     <h3>Espaciado</h3>
-                    <input type="number" class="inputs buttons spacing__button" min="10" max="50" value="35">
+                    <input type="number" name="spacing font" class="inputs buttons spacing__button" min="10" max="50" value="35">
                 </section>
                 <section>
                     <h3>Interlineado</h3>
-                    <select name="" class="inputs buttons leading__select" id="">
+                    <select name="leading text" class="inputs buttons leading__select" id="">
                         <option value="0.8">0.8</option>
                         <option value="1">1</option>
                         <option value="1.2">1.2</option>
