@@ -1,6 +1,6 @@
 # Editor Memes by María Eugenia Toledo
 ---
-### Java Scritp project 👩‍💻
+### Java Script project 👩‍💻
 
 > Hi everyone, I designed this meme editor for you can create your own meme 🤪 You have to paste the url image you like, put a text on it and edit as you want! Try it and design your meme ❗
 
